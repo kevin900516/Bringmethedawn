@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="header.css">
   <script src="global.js" defer></script>
 </head>
-<body>
+<body class="fade-in">
 <header class="site-header" id="header">
   <div class="header-container">
     <a href="index.html" class="brand-logo">Bring Me The Dawn</a>
@@ -140,41 +140,64 @@
 <section id="featured-video" class="section-container">
   <h2 class="section-title">Featured Cover Video</h2>
   <div class="video-player-container">
-    <a href="#" class="video-thumbnail-wrapper">
-      <img src="images/cc711b1673a02140850a607c2d870242932a0c80.png" alt="Featured video thumbnail" class="video-thumbnail">
-      <div class="play-overlay">
-        <img src="images/I632_2549_354_1584.svg" alt="Play video">
+    <div class="custom-video-player">
+      <video id="featuredVideo" class="video-element" src="https://www.w3schools.com/html/mov_bbb.mp4" poster="images/cc711b1673a02140850a607c2d870242932a0c80.png"></video>
+      <div class="video-controls">
+        <button class="play-pause-btn">
+          <img src="images/I632_2493_354_1493_200_278.svg" alt="Play icon" class="play-icon">
+          <img src="images/I632_2493_354_1494_200_533.svg" alt="Pause icon" class="pause-icon" style="display: none;">
+        </button>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fg"></div>
+        </div>
+        <div class="time-display">
+          <span class="current-time">0:00</span> / <span class="duration">0:00</span>
+        </div>
+        <div class="volume-control">
+          <img src="images/d3d7792f9f25b5c07992958c4f01684abaee8a1c.png" alt="Volume icon" class="volume-icon">
+          <div class="volume-slider-container">
+            <div class="volume-slider-fg"></div>
+          </div>
+        </div>
       </div>
-    </a>
-    <a href="#" class="read-more-btn">Read more</a>
+    </div>
+    <a href="covers.html" class="read-more-btn">Read more</a>
   </div>
 </section>
 <section id="shop" class="section-container">
   <h2 class="section-title-alt">周邊商品</h2>
   <div class="merch-grid">
     <div class="product-card">
-      <img src="images/1965503632118371ba00e9f919d7f3a76539bb71.png" alt="Bring Me The Dawn T shirt" class="product-image">
+      <a href="#" class="product-image-link">
+        <img src="images/1965503632118371ba00e9f919d7f3a76539bb71.png" alt="Bring Me The Dawn T shirt" class="product-image">
+      </a>
       <div class="product-info">
         <h3 class="product-name">Bring Me The Dawn<br>T shirt</h3>
         <p class="product-price">$600</p>
       </div>
     </div>
     <div class="product-card">
-      <img src="images/531bc452ed64a4739b972469ba958b3fbd540680.png" alt="Bring Me The Dawn T shirt" class="product-image">
+      <a href="#" class="product-image-link">
+        <img src="images/531bc452ed64a4739b972469ba958b3fbd540680.png" alt="Bring Me The Dawn T shirt" class="product-image">
+      </a>
       <div class="product-info">
         <h3 class="product-name">Bring Me The Dawn<br>T shirt</h3>
         <p class="product-price">$600</p>
       </div>
     </div>
     <div class="product-card">
-      <img src="images/6ac84b13163b88049d753bbed6871d6cf9a14454.png" alt="Shadows of Dawn Album" class="product-image">
+      <a href="#" class="product-image-link">
+        <img src="images/6ac84b13163b88049d753bbed6871d6cf9a14454.png" alt="Shadows of Dawn Album" class="product-image">
+      </a>
       <div class="product-info">
         <h3 class="product-name">Shadows of Dawn</h3>
         <p class="product-price">$1200</p>
       </div>
     </div>
     <div class="product-card">
-      <img src="images/09236bc0e9564ba7339fa22d5313c5a9c57cd762.png" alt="Dark Utopia Album" class="product-image">
+      <a href="#" class="product-image-link">
+        <img src="images/09236bc0e9564ba7339fa22d5313c5a9c57cd762.png" alt="Dark Utopia Album" class="product-image">
+      </a>
       <div class="product-info">
         <h3 class="product-name">Dark Utopia</h3>
         <p class="product-price">$1200</p>
