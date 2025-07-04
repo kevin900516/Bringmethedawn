@@ -84,6 +84,7 @@
   border-radius: 4px;
   padding: 8px 16px;
   margin-top: auto; /* Push button to the bottom */
+  width: 100%; /* Make button width consistent */
   cursor: pointer;
   transition: opacity 0.3s ease;
   font-weight: bold;
