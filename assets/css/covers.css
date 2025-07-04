@@ -1,0 +1,70 @@
+/* CSS for section section:covers */
+.covers-section {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 83px 24px 40px; /* 與 header-container 保持一致 */
+  }
+  .covers-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+  }
+  .content-search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-interactive);
+    border-radius: 12px;
+    height: 48px;
+    width: 100%;
+    padding: 0 16px;
+  }
+  .search-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  .content-search-bar .search-input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .content-search-bar .search-input::placeholder {
+    color: var(--text-muted);
+    opacity: 1;
+  }
+  .content-search-bar .search-input:focus {
+    outline: none;
+  }
+  .covers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(176px, 1fr)); /* 一排只放4個 cover-item */
+    gap: 12px;
+    width: 100%;
+  }
+  .cover-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cover-image {
+    width: 100%;
+    aspect-ratio: 176 / 99;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .cover-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center; /* 將 cover-title 置中 */
+  }

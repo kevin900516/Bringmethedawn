@@ -1,0 +1,103 @@
+html {
+  height: 100%;
+  overflow-y: scroll; /* 確保有滾動條 */
+}
+
+:root {
+  --text-light: #ffffff;
+  --text-muted: #adadad;
+  --bg-dark-primary: #1a1a1a;
+  --bg-dark-secondary: #060606;
+  --bg-dark-tertiary: #262626;
+  --bg-interactive: #363636;
+  --border-color: #4d4d4d;
+  --accent-gradient: linear-gradient(90deg, #ffb784 0%, #e63f3f 99.99%);
+  --font-display: 'Orbitron', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark-primary);
+  color: var(--text-light);
+  font-family: 'jf-openhuninn-2.1', sans-serif;
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../images/4e9151ac47e54e643af3c200fc1acaac527bfba6.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.site-header-wrapper {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 1.5s ease-out forwards;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
+.highlight {
+  background-color: yellow;
+  color: black;
+}

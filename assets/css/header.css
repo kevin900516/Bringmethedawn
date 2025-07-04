@@ -1,0 +1,433 @@
+/* CSS for section section:header */
+.site-header {
+  background-color: var(--bg-dark-secondary);
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%; /* 確保固定後佔滿整個寬度 */
+  z-index: 1000; /* 提高 z-index 確保在最上層 */
+  opacity: 1;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.brand-logo {
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 1.2;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 77px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main-nav a {
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 1;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+  font-weight: 700;
+}
+.main-nav a:hover {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.nav-link-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-link-dropdown img {
+  width: 33px;
+  height: 33px;
+}
+
+.dropdown-link {
+  display: flex;
+  align-items: center;
+}
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-interactive);
+  border-radius: 20px;
+  padding: 0 10px;
+  height: 40px; /* 統一高度 */
+  width: 200px; /* 統一寬度 */
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  color: var(--text-light);
+  outline: none;
+  padding: 10px;
+  width: 150px;
+  font-size: 16px; /* 統一文字大小 */
+}
+
+.search-input::placeholder {
+  color: var(--text-muted); /* 統一 placeholder 顏色 */
+  opacity: 1;
+}
+
+.search-bar .search-icon { /* 提高特異性，確保只影響 header 的搜尋圖示 */
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+.action-icon {
+  background-color: var(--bg-interactive);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease-in-out;
+  overflow: hidden; /* Add overflow hidden back for the profile icon */
+}
+.cart-icon {
+  overflow: visible; /* Ensure cart count is not hidden */
+}
+.action-icon:hover {
+  transform: scale(1.1);
+}
+.cart-icon {
+  position: relative;
+}
+
+.cart-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-align: center;
+  display: none; /* Initially hidden */
+  box-sizing: border-box;
+}
+.profile-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon-button {
+  background-color: var(--bg-interactive);
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Dropdown Menu Styles */
+.main-nav .dropdown {
+  position: relative;
+}
+
+.main-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%; /* Center the dropdown */
+  transform: translateX(-50%); /* Adjust for centering */
+  background-color: var(--bg-dark-secondary);
+  list-style: none;
+  padding: 10px 0;
+  margin-top: 0; /* Add some space between the button and the menu */
+  border-radius: 8px;
+  min-width: 160px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.main-nav .dropdown-menu li {
+  padding: 0;
+}
+
+.main-nav .dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  font-family: 'jf-openhuninn-2.1', sans-serif;
+  font-size: 24px; /* Smaller font size for dropdown items */
+  white-space: nowrap;
+}
+
+.main-nav .dropdown-menu a:hover {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 1200px) {
+  .site-header {
+    justify-content: center;
+  }
+  .main-nav ul {
+    gap: 40px;
+  }
+  .main-nav a {
+    font-size: 24px;
+  }
+}
+@media (max-width: 992px) {
+  .header-container {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+  .main-nav ul {
+    gap: 20px;
+  }
+  .main-nav a {
+    font-size: 24px;
+  }
+  .brand-logo {
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+    .search-bar {
+        display: none;
+    }
+    .brand-logo {
+        font-size: 22px;
+    }
+}
+
+/* Cart Overlay Styles */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  visibility: hidden; /* Hidden by default */
+  opacity: 0; /* Hidden by default */
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.cart-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cart-sidebar {
+  width: 350px;
+  height: 100%;
+  background-color: var(--bg-dark-secondary);
+  transform: translateX(100%); /* Start off-screen to the right */
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.cart-overlay.active .cart-sidebar {
+  transform: translateX(0); /* Slide in */
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cart-header h2 {
+  font-family: 'jf-openhuninn-2.1', sans-serif; /* 使用 jf-openhuninn-2.1 */
+  font-size: 28px;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.close-cart-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 30px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.close-cart-btn:hover {
+  color: var(--text-light);
+}
+
+.cart-items {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.empty-cart-message {
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cart-summary {
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.cart-summary p {
+  font-family: 'jf-openhuninn-2.1', sans-serif; /* 使用 jf-openhuninn-2.1 */
+  font-size: 30px;
+  color: var(--text-light);
+  margin-bottom: 48px;
+}
+
+.cart-summary span {
+  font-weight: bold;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background: var(--accent-gradient);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.checkout-btn:hover {
+  opacity: 0.9;
+}
+
+/* Cart Item Styles (for dynamically added items) */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-details h3 {
+  font-family: 'jf-openhuninn-2.1', sans-serif; /* 使用 jf-openhuninn-2.1 */
+  font-size: 16px;
+  color: var(--text-light);
+  margin: 0 0 5px 0;
+}
+
+.cart-item-details p {
+  font-family: 'jf-openhuninn-2.1', sans-serif; /* 使用 jf-openhuninn-2.1 */
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart-item-quantity button {
+  background-color: var(--bg-interactive);
+  color: var(--text-light);
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cart-item-quantity span {
+  font-family: 'jf-openhuninn-2.1', sans-serif; /* 使用 jf-openhuninn-2.1 */
+  font-size: 16px;
+  color: var(--text-light);
+}
+
+.remove-item-btn {
+  background: none;
+  border: none;
+  color: #e63f3f; /* Red color for remove */
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.remove-item-btn:hover {
+  color: #ff0000;
+}

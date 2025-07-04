@@ -1,0 +1,74 @@
+/* CSS for section section:artists */
+.artists-section {
+  padding-top: 133px;
+  padding-bottom: 215px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 0 128px 0;
+}
+.artist-grid {
+  display: flex;
+  justify-content: center;
+  gap: 108px; /* 與 homepage2.html 的 members-grid 保持一致 */
+  flex-wrap: wrap;
+}
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px; /* 與 homepage2.html 的 member-card 保持一致 */
+  width: 256px;
+}
+.artist-photo {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%; /* 與 homepage2.html 的 member-photo 保持一致 */
+  object-fit: cover;
+}
+.artist-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px; /* 與 homepage2.html 的 member-card 內部元素間距保持一致 */
+  text-align: center;
+}
+.artist-name {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--text-light);
+  margin: 0;
+}
+.artist-role {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .artist-grid {
+    gap: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .artists-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .section-title {
+    margin-bottom: 60px;
+  }
+  .artist-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}

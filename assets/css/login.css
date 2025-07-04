@@ -1,0 +1,160 @@
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* CSS for section section:login */
+.login-prompt {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 42px 38px;
+  width: 100%;
+  max-width: 435px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #111113;
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 13px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-google {
+  background-color: #d7503f;
+  color: var(--text-light);
+}
+
+.btn-google img {
+  width: 18px;
+  height: 18px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #000;
+  font-size: 12px;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  font-size: 16px;
+  color: #111113;
+}
+
+.form-group input::placeholder {
+  color: rgba(17, 17, 19, 0.5);
+  opacity: 1;
+}
+
+.form-group input:focus {
+  outline: none;
+  border: 1px solid #111113;
+}
+
+.form-group-password input {
+  padding-right: 44px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-password img {
+  width: 18px;
+  height: 18px;
+}
+
+.form-options {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #000;
+  cursor: pointer;
+}
+
+.remember-me input {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.remember-me input:checked {
+  background-color: #111111;
+}
+
+.btn-signin {
+  background-color: #111111;
+  color: var(--text-light);
+}
+
+.btn-signin img {
+  width: 18px;
+  height: 18px;
+}
+
+.signup-link {
+  font-size: 16px;
+  text-align: center;
+  color: rgba(17, 17, 19, 0.6);
+}
+
+.signup-link a {
+  color: #111113;
+  text-decoration: underline;
+}

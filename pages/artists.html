@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bring Me The Dawn - Artists</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/artists.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+  <script src="../assets/js/global.js" defer></script>
+</head>
+<body>
+<div class="site-header-wrapper">
+<header class="site-header" id="header">
+  <div class="header-container">
+    <a href="../index.html" class="brand-logo">Bring Me The Dawn</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="artists.html">Artist</a></li>
+        <li><a href="covers.html">Videos</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-link-dropdown">
+            <span>Shop</span>
+            <img src="../assets/images/I255_1072_316_629_315_490.svg" alt="dropdown arrow">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="goods.html">周邊商品</a></li>
+            <li><a href="tabs.html">樂譜</a></li>
+            <li><a href="albums.html">專輯</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="user-actions">
+      <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Search...">
+        <img src="../assets/images/I255_1072_421_1269_418_924.svg" alt="Search Icon" class="search-icon">
+      </div>
+      <a href="#" class="action-icon cart-icon">
+        <img src="../assets/images/I255_1072_410_1147_390_2665.svg" alt="Cart Icon">
+        <span class="cart-count">0</span>
+      </a>
+      <a href="login.html" class="action-icon profile-icon">
+        <img src="../assets/images/9e1e81c43223f040460c4657fcb4bd3a93be1ab7.png" alt="User Profile">
+      </a>
+    </div>
+  </div>
+</header>
+</div>
+<main>
+  <section id="artists" class="artists-section">
+    <div class="container">
+      <h2 class="section-title">Artists</h2>
+      <div class="artist-grid">
+        <div class="artist-card">
+          <img class="artist-photo" src="../assets/images/0517b86a3090f0a3fedfe90c75c606ea59538338.png" alt="Panda playing a light blue electric guitar">
+          <div class="artist-info">
+            <h3 class="artist-name">Panda</h3>
+            <p class="artist-role">Guitarist / Producer</p>
+          </div>
+        </div>
+        <div class="artist-card">
+          <img class="artist-photo" src="../assets/images/9cbb234a9abc6019e215ddb9b78cc98c023f704b.png" alt="Maguro playing a white electric guitar">
+          <div class="artist-info">
+            <h3 class="artist-name">Maguro</h3>
+            <p class="artist-role">Guitarist / Vocal</p>
+          </div>
+        </div>
+        <div class="artist-card">
+          <img class="artist-photo" src="../assets/images/80a6dff6ecf21e27dd85b283796d4c82397c7645.png" alt="MaGeeMark playing a purple bass guitar">
+          <div class="artist-info">
+            <h3 class="artist-name">MaGeeMark</h3>
+            <p class="artist-role">Guitarist / Bassist</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<section id="section-footer">
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#">隱私政策</a></li>
+          <li><a href="#">服務條款</a></li>
+          <li><a href="contact.html">聯絡我們</a></li>
+        </ul>
+      </nav>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><img src="../assets/images/I255_1222_255_312.svg" alt="Facebook icon"></a>
+        <a href="#" aria-label="Instagram"><img src="../assets/images/I255_1222_255_317.svg" alt="Instagram icon"></a>
+        <a href="#" aria-label="Twitter"><img src="../assets/images/I255_1222_255_322.svg" alt="Twitter icon"></a>
+      </div>
+      <p class="copyright">@2025 Bring Me The Dawn. All rights reserved.</p>
+    </div>
+  </footer>
+</section>
+<!-- Cart Overlay -->
+<div class="cart-overlay" id="cartOverlay">
+  <div class="cart-sidebar">
+    <div class="cart-header">
+      <h2>購物車</h2>
+      <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- Cart items will be dynamically added here -->
+      <p class="empty-cart-message">購物車是空的。</p>
+    </div>
+    <div class="cart-summary">
+      <p>總計: <span id="cartTotal">$0.00</span></p>
+      <button class="checkout-btn">結帳</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
