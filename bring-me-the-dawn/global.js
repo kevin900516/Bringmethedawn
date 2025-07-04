@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Handle homepage0.html click to fade out and navigate
+  // Handle index.html click to fade out and navigate
   const mainHomepage0 = document.getElementById('main-homepage0');
   if (mainHomepage0) {
     mainHomepage0.addEventListener('click', function() {
