@@ -49,6 +49,7 @@
   flex-grow: 1;
   text-align: center;
   margin-top: 8px;
+  width: 100%; /* Ensure info container takes full width of card */
 }
 
 .product-name {
