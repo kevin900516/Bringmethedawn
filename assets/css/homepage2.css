@@ -581,7 +581,7 @@ img {
   font-weight: 500;
   line-height: 1.2;
   color: var(--text-primary);
-  min-height: 48px;
+  min-height: 44px; /* Ensure consistent height for alignment */
 }
 .product-price {
   font-size: 14px;
