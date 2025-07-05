@@ -588,7 +588,7 @@ img {
   font-weight: 400;
   line-height: 21px;
   color: var(--text-secondary);
-  margin-top: 4px;
+  margin: 5px 0;
 }
 
 /* CSS for section section:footer */
