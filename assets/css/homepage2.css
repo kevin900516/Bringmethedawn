@@ -571,6 +571,10 @@ img {
 }
 .product-info {
   margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
 }
 .product-name {
   font-size: 16px;
@@ -666,4 +670,21 @@ img {
     width: 20px;
     height: 20px;
   }
+}
+
+.add-to-cart-btn {
+  background: rgb(23, 127, 212);
+  color: var(--text-light);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-top: auto;
+  width: 100%;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  font-weight: bold;
+}
+
+.add-to-cart-btn:hover {
+  opacity: 0.85;
 }
