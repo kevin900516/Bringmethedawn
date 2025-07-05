@@ -23,11 +23,48 @@
   gap: 16px; /* 與 homepage2.html 的 member-card 保持一致 */
   width: 256px;
 }
-.artist-photo {
+
+.artist-photo-container {
+  position: relative;
   width: 256px;
   height: 256px;
+}
+
+.artist-photo {
+  width: 100%;
+  height: 100%;
   border-radius: 50%; /* 與 homepage2.html 的 member-photo 保持一致 */
   object-fit: cover;
+}
+
+.artist-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.artist-photo-container:hover .artist-overlay {
+  opacity: 1;
+}
+
+.artist-overlay .social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.artist-overlay .social-links a img {
+  width: 32px;
+  height: 32px;
+  filter: invert(1);
 }
 .artist-info {
   display: flex;
