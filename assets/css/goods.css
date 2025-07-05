@@ -67,7 +67,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
-  min-height: 44px; /* Ensure consistent height for alignment */
+  margin-bottom: 8px; /* Adjust space below the name */
 }
 
 .product-price {
