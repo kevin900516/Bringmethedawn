@@ -168,28 +168,12 @@
 </section>
 <section id="featured-video" class="section-container">
   <h2 class="section-title fade-in-on-scroll"><span>Featured Cover Video</span></h2>
-  <div class="video-player-container">
-    <div class="custom-video-player fade-in-on-scroll">
-      <video id="featuredVideo" class="video-element" src="https://www.w3schools.com/html/mov_bbb.mp4" poster="../assets/images/cc711b1673a02140850a607c2d870242932a0c80.png"></video>
-      <div class="video-controls">
-        <button class="play-pause-btn">
-          <img src="../assets/images/I632_2493_354_1493_200_278.svg" alt="Play icon" class="play-icon">
-          <img src="../assets/images/I632_2493_354_1494_200_533.svg" alt="Pause icon" class="pause-icon" style="display: none;">
-        </button>
-        <div class="progress-bar-container">
-          <div class="progress-bar-fg"></div>
-        </div>
-        <div class="time-display">
-          <span class="current-time">0:00</span> / <span class="duration">0:00</span>
-        </div>
-        <div class="volume-control">
-          <img src="../assets/images/d3d7792f9f25b5c07992958c4f01684abaee8a1c.png" alt="Volume icon" class="volume-icon">
-          <div class="volume-slider-container">
-            <div class="volume-slider-fg"></div>
-          </div>
-        </div>
-      </div>
+  <div class="video-player-container" style="max-width: 800px; margin: auto; position: relative;">
+    <div class="custom-video-player fade-in-on-scroll" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe id="youtube-player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube-nocookie.com/embed/zoZjt-rqtAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
+    <button id="prev-video" style="position: absolute; top: 50%; left: -50px; transform: translateY(-50%); z-index: 10; background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px; cursor: pointer;"><</button>
+    <button id="next-video" style="position: absolute; top: 50%; right: -50px; transform: translateY(-50%); z-index: 10; background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px; cursor: pointer;">></button>
     <a href="covers.html" class="read-more-btn">Read more</a>
   </div>
 </section>
@@ -201,7 +185,7 @@
         <img src="../assets/images/1965503632118371ba00e9f919d7f3a76539bb71.png" alt="Bring Me The Dawn T shirt" class="product-image">
       </a>
       <div class="product-info">
-        <h3 class="product-name fade-in-on-scroll">BMTH T-Shirt (Star)</h3>
+        <h3 class="product-name fade-in-on-scroll">BMTD T-Shirt (Star)</h3>
         <p class="product-price fade-in-on-scroll">$600</p>
         <button class="add-to-cart-btn">Add to Cart</button>
       </div>
@@ -211,7 +195,7 @@
         <img src="../assets/images/531bc452ed64a4739b972469ba958b3fbd540680.png" alt="Bring Me The Dawn T shirt" class="product-image">
       </a>
       <div class="product-info">
-        <h3 class="product-name fade-in-on-scroll">BMTH T-Shirt (Logo)</h3>
+        <h3 class="product-name fade-in-on-scroll">BMTD T-Shirt (Logo)</h3>
         <p class="product-price fade-in-on-scroll">$600</p>
         <button class="add-to-cart-btn">Add to Cart</button>
       </div>
@@ -275,5 +259,28 @@
   <img src="../assets/images/up arrow.png" alt="回到頂部">
 </button>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const videoIds = ['zoZjt-rqtAE', '18V9OZxXmHg'];
+    let currentVideoIndex = 0;
+    const player = document.getElementById('youtube-player');
+    const prevBtn = document.getElementById('prev-video');
+    const nextBtn = document.getElementById('next-video');
+
+    function updateVideo() {
+      player.src = `https://www.youtube-nocookie.com/embed/${videoIds[currentVideoIndex]}`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentVideoIndex = (currentVideoIndex - 1 + videoIds.length) % videoIds.length;
+      updateVideo();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentVideoIndex = (currentVideoIndex + 1) % videoIds.length;
+      updateVideo();
+    });
+  });
+</script>
 </body>
 </html>
