@@ -20,11 +20,12 @@
 }
 
 .product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 87px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px; /* Adjust gap for a 4-column layout */
   width: 100%;
+  max-width: 1200px; /* Optional: constrain max width */
+  margin: 0 auto;
 }
 
 .product-card {
