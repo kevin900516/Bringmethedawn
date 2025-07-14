@@ -416,4 +416,34 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+
+  // Sidebar collapsible menu logic
+  const collapsibleToggles = document.querySelectorAll('.sidebar .category-toggle');
+  collapsibleToggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      const parentLi = this.parentElement;
+      parentLi.classList.toggle('open');
+    });
+  });
+
+  // Sidebar Overlay Logic
+  const sidebarTrigger = document.querySelector('.sidebar-trigger');
+  const sidebar = document.querySelector('.sidebar');
+  const sidebarOverlay = document.querySelector('.sidebar-overlay');
+  const sidebarCloseBtn = document.querySelector('.sidebar-close-btn');
+
+  if (sidebarTrigger && sidebar && sidebarOverlay && sidebarCloseBtn) {
+    sidebarTrigger.addEventListener('click', () => {
+      sidebar.classList.add('open');
+      sidebarOverlay.classList.add('active');
+    });
+
+    const closeSidebar = () => {
+      sidebar.classList.remove('open');
+      sidebarOverlay.classList.remove('active');
+    };
+
+    sidebarCloseBtn.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+  }
 });

@@ -14,7 +14,10 @@
   font-family: var(--font-heading-local);
   font-weight: 400;
   font-size: 40px;
-  margin-bottom: 109px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 0 40px 0; /* Reset margin and add margin to the bottom */
 }
 
 .product-grid {
@@ -102,6 +105,7 @@
   align-items: center;
   gap: 10px;
   margin-top: 181px;
+  margin-bottom: 40px; /* Add margin to the bottom */
 }
 
 .pagination .page-link {
