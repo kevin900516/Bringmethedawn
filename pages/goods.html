@@ -11,9 +11,11 @@
   <link rel="stylesheet" href="../assets/css/header.css">
   <link rel="stylesheet" href="../assets/css/footer.css">
   <link rel="stylesheet" href="../assets/css/goods.css">
+  <link rel="stylesheet" href="../assets/css/shop.css">
   <script src="../assets/js/global.js" defer></script>
 </head>
 <body>
+<!-- Header remains the same -->
 <div class="site-header-wrapper">
 <header class="site-header" id="header">
   <div class="header-container">
@@ -52,44 +54,85 @@
   </div>
 </header>
 </div>
-<main id="section-features" class="features-section">
-  <div class="container">
-    <h2 class="features-title">周邊商品</h2>
-    <div class="product-grid">
-      <article class="product-card" data-id="bmtd-tshirt-star">
-        <a href="#" class="product-image-link">
-          <img src="../assets/images/1965503632118371ba00e9f919d7f3a76539bb71.png" alt="Bring Me The Dawn T shirt with colorful star">
-        </a>
-        <div class="product-info">
-          <h3 class="product-name">BMTD T-Shirt (Star)</h3>
-          <p class="product-price">$600</p>
-          <button class="add-to-cart-btn">Add to Cart</button>
+
+<!-- NEW OVERLAY LAYOUT -->
+<div class="sidebar-overlay"></div>
+<aside class="sidebar">
+  <button class="sidebar-close-btn">&times;</button>
+  <nav class="sidebar-nav">
+    <h3 class="nav-title">商品分類</h3>
+    <ul>
+      <li class="collapsible open">
+        <div class="category-toggle">
+            <span>商店</span>
+            <span class="arrow">></span>
         </div>
-      </article>
-      <article class="product-card" data-id="bmtd-tshirt-logo">
-        <a href="#" class="product-image-link">
-          <img src="../assets/images/531bc452ed64a4739b972469ba958b3fbd540680.png" alt="Bring Me The Dawn T shirt with white logo">
-        </a>
-        <div class="product-info">
-          <h3 class="product-name">BMTD T-Shirt (Logo)</h3>
-          <p class="product-price">$600</p>
-          <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-      </article>
+        <ul class="submenu">
+          <li><a href="goods.html" class="active">周邊商品</a></li>
+          <li><a href="tabs.html">樂譜</a></li>
+          <li><a href="albums.html">專輯</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+<div class="main-content-area">
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="../index.html">首頁</a>
+      <span>></span>
+      <a href="#">商店</a>
+      <span>></span>
+      <span class="current">周邊商品</span>
     </div>
-    <nav class="pagination" aria-label="Product page navigation">
-      <a href="#" class="page-link arrow" aria-label="Previous Page">
-        <img src="../assets/images/I322_1247_410_1774_410_1633.svg" alt="Previous">
-      </a>
-      <a href="#" class="page-link active" aria-current="page">1</a>
-      <a href="#" class="page-link">2</a>
-      <a href="#" class="page-link">3</a>
-      <a href="#" class="page-link arrow" aria-label="Next Page">
-        <img src="../assets/images/I322_1247_410_1828_410_1751.svg" alt="Next">
-      </a>
-    </nav>
   </div>
-</main>
+  
+  <main id="section-features" class="features-section">
+    <div class="title-bar">
+        <button class="sidebar-trigger">
+          <img src="../assets/images/I255_1072_316_629_315_490.svg" alt="menu icon" style="width: 20px; height: 20px;">
+          <span>商品分類</span>
+        </button>
+        <h2 class="features-title">周邊商品</h2>
+    </div>
+    <div class="shop-content">
+      <div class="product-grid">
+          <article class="product-card" data-id="bmtd-tshirt-star">
+            <a href="#" class="product-image-link">
+              <img src="../assets/images/1965503632118371ba00e9f919d7f3a76539bb71.png" alt="Bring Me The Dawn T shirt with colorful star">
+            </a>
+            <div class="product-info">
+              <h3 class="product-name">BMTD T-Shirt (Star)</h3>
+              <p class="product-price">$600</p>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </article>
+          <article class="product-card" data-id="bmtd-tshirt-logo">
+            <a href="#" class="product-image-link">
+              <img src="../assets/images/531bc452ed64a4739b972469ba958b3fbd540680.png" alt="Bring Me The Dawn T shirt with white logo">
+            </a>
+            <div class="product-info">
+              <h3 class="product-name">BMTD T-Shirt (Logo)</h3>
+              <p class="product-price">$600</p>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <nav class="pagination" aria-label="Product page navigation">
+          <a href="#" class="page-link arrow" aria-label="Previous Page">
+            <img src="../assets/images/I322_1247_410_1774_410_1633.svg" alt="Previous">
+          </a>
+          <a href="#" class="page-link active" aria-current="page">1</a>
+          <a href="#" class="page-link">2</a>
+          <a href="#" class="page-link">3</a>
+          <a href="#" class="page-link arrow" aria-label="Next Page">
+            <img src="../assets/images/I322_1247_410_1828_410_1751.svg" alt="Next">
+          </a>
+        </nav>
+    </div>
+  </main>
+</div>
 <section id="section-footer">
   <footer class="site-footer">
     <div class="container footer-container">

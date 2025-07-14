@@ -11,9 +11,11 @@
   <link rel="stylesheet" href="../assets/css/header.css">
   <link rel="stylesheet" href="../assets/css/footer.css">
   <link rel="stylesheet" href="../assets/css/tabs.css">
+  <link rel="stylesheet" href="../assets/css/shop.css">
   <script src="../assets/js/global.js" defer></script>
 </head>
 <body>
+<!-- Header remains the same -->
 <div class="site-header-wrapper">
 <header class="site-header" id="header">
   <div class="header-container">
@@ -52,74 +54,115 @@
   </div>
 </header>
 </div>
-<main id="section-features" class="features-section">
-  <div class="container">
-    <h2 class="features-title">樂譜</h2>
-    <div class="product-grid">
-      <article class="product-card" data-id="tab-atarayo-usotsuki">
-        <a href="#" class="product-image-link">
-          <img src="../assets/images/2bd35f467a80892baf905f8037de1b711a196a6e.png" alt="あたらよ 嘘つき">
-        </a>
-        <div class="product-info">
-          <h3 class="product-name">あたらよ - 嘘つき</h3>
-          <p class="product-price">$300</p>
-          <button class="add-to-cart-btn">Add to Cart</button>
+
+<!-- NEW OVERLAY LAYOUT -->
+<div class="sidebar-overlay"></div>
+<aside class="sidebar">
+  <button class="sidebar-close-btn">&times;</button>
+  <nav class="sidebar-nav">
+    <h3 class="nav-title">商品分類</h3>
+    <ul>
+      <li class="collapsible open">
+        <div class="category-toggle">
+            <span>商店</span>
+            <span class="arrow">></span>
         </div>
-      </article>
-      <article class="product-card" data-id="tab-bmth-drown">
-        <a href="#" class="product-image-link">
-          <img src="../assets/images/cf015138b8f9de5c67b41bc62e296b2452dac11e.png" alt="Bring Me The Horizon Drown">
-        </a>
-        <div class="product-info">
-          <h3 class="product-name">Bring Me The Horizon - Drown</h3>
-          <p class="product-price">$300</p>
-          <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-      </article>
-      <article class="product-card" data-id="tab-bmth-medicine">
-        <a href="#" class="product-image-link">
-          <img src="../assets/images/9d01c27be2f290c3b939486c0d3c263616fddb64.png" alt="Bring Me The Horizon Medicine">
-        </a>
-        <div class="product-info">
-          <h3 class="product-name">Bring Me The Horizon - Medicine</h3>
-          <p class="product-price">$300</p>
-          <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-      </article>
-      <article class="product-card" data-id="tab-oor-dreamer">
-        <a href="#" class="product-image-link">
-          <img src="../assets/images/9477a15c16d52347169824461d3a5195e4ecc52c.png" alt="ONE OK ROCK 完全感覚Dreamer">
-        </a>
-        <div class="product-info">
-          <h3 class="product-name">ONE OK ROCK - 完全感覚Dreamer</h3>
-          <p class="product-price">$300</p>
-          <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-      </article>
-      <article class="product-card" data-id="tab-vaundy-koikaze">
-        <a href="#" class="product-image-link">
-          <img src="../assets/images/e8d09018176ff6e000f5f97a742cd7e8dc1f1348.png" alt="Vaundy 恋風邪にのせて">
-        </a>
-        <div class="product-info">
-          <h3 class="product-name">Vaundy - 戀風邪にのせて</h3>
-          <p class="product-price">$300</p>
-          <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-      </article>
+        <ul class="submenu">
+          <li><a href="goods.html">周邊商品</a></li>
+          <li><a href="tabs.html" class="active">樂譜</a></li>
+          <li><a href="albums.html">專輯</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+<div class="main-content-area">
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="../index.html">首頁</a>
+      <span>></span>
+      <a href="#">商店</a>
+      <span>></span>
+      <span class="current">樂譜</span>
     </div>
-    <nav class="pagination" aria-label="Product page navigation">
-      <a href="#" class="page-link arrow" aria-label="Previous Page">
-        <img src="../assets/images/I322_1247_410_1774_410_1633.svg" alt="Previous">
-      </a>
-      <a href="#" class="page-link active" aria-current="page">1</a>
-      <a href="#" class="page-link">2</a>
-      <a href="#" class="page-link">3</a>
-      <a href="#" class="page-link arrow" aria-label="Next Page">
-        <img src="../assets/images/I322_1247_410_1828_410_1751.svg" alt="Next">
-      </a>
-    </nav>
   </div>
-</main>
+  
+  <main id="section-features" class="features-section">
+    <div class="title-bar">
+        <button class="sidebar-trigger">
+          <img src="../assets/images/I255_1072_316_629_315_490.svg" alt="menu icon" style="width: 20px; height: 20px;">
+          <span>商品分類</span>
+        </button>
+        <h2 class="features-title">樂譜</h2>
+    </div>
+    <div class="shop-content">
+      <div class="product-grid">
+          <article class="product-card" data-id="tab-atarayo-usotsuki">
+            <a href="#" class="product-image-link">
+              <img src="../assets/images/2bd35f467a80892baf905f8037de1b711a196a6e.png" alt="あたらよ 嘘つき">
+            </a>
+            <div class="product-info">
+              <h3 class="product-name">あたらよ - 嘘つき</h3>
+              <p class="product-price">$300</p>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </article>
+          <article class="product-card" data-id="tab-bmth-drown">
+            <a href="#" class="product-image-link">
+              <img src="../assets/images/cf015138b8f9de5c67b41bc62e296b2452dac11e.png" alt="Bring Me The Horizon Drown">
+            </a>
+            <div class="product-info">
+              <h3 class="product-name">Bring Me The Horizon - Drown</h3>
+              <p class="product-price">$300</p>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </article>
+          <article class="product-card" data-id="tab-bmth-medicine">
+            <a href="#" class="product-image-link">
+              <img src="../assets/images/9d01c27be2f290c3b939486c0d3c263616fddb64.png" alt="Bring Me The Horizon Medicine">
+            </a>
+            <div class="product-info">
+              <h3 class="product-name">Bring Me The Horizon - Medicine</h3>
+              <p class="product-price">$300</p>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </article>
+          <article class="product-card" data-id="tab-oor-dreamer">
+            <a href="#" class="product-image-link">
+              <img src="../assets/images/9477a15c16d52347169824461d3a5195e4ecc52c.png" alt="ONE OK ROCK 完全感覚Dreamer">
+            </a>
+            <div class="product-info">
+              <h3 class="product-name">ONE OK ROCK - 完全感覚Dreamer</h3>
+              <p class="product-price">$300</p>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </article>
+          <article class="product-card" data-id="tab-vaundy-koikaze">
+            <a href="#" class="product-image-link">
+              <img src="../assets/images/e8d09018176ff6e000f5f97a742cd7e8dc1f1348.png" alt="Vaundy 恋風邪にのせて">
+            </a>
+            <div class="product-info">
+              <h3 class="product-name">Vaundy - 戀風邪にのせて</h3>
+              <p class="product-price">$300</p>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <nav class="pagination" aria-label="Product page navigation">
+          <a href="#" class="page-link arrow" aria-label="Previous Page">
+            <img src="../assets/images/I322_1247_410_1774_410_1633.svg" alt="Previous">
+          </a>
+          <a href="#" class="page-link active" aria-current="page">1</a>
+          <a href="#" class="page-link">2</a>
+          <a href="#" class="page-link">3</a>
+          <a href="#" class="page-link arrow" aria-label="Next Page">
+            <img src="../assets/images/I322_1247_410_1828_410_1751.svg" alt="Next">
+          </a>
+        </nav>
+    </div>
+  </main>
+</div>
 <section id="section-footer">
   <footer class="site-footer">
     <div class="container footer-container">
